@@ -1,0 +1,27 @@
+<mat-card>
+    <mat-card-header>
+        <mat-card-title>{{book.title}}</mat-card-title>
+        <mat-card-subtitle>{{book.author}}</mat-card-subtitle>
+    </mat-card-header>
+
+  <img height="100" width="100" src="assets/libro.png" alt="">
+
+    <mat-card-content>
+        <h3>{{book.published}}</h3>
+        <p>
+            <strong>Genre</strong>
+            {{book.genre}}
+            <br>
+
+            <strong>Stock: </strong>
+            {{book.stock}}
+        </p>
+    </mat-card-content>
+
+    <mat-card-actions>
+        <button [routerLink]="['/library', book._id]" mat-button color="warn">    
+Read more...
+        </button>
+    
+    </mat-card-actions>
+</mat-card>

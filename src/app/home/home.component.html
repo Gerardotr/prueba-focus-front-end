@@ -1,0 +1,173 @@
+<!--Section: Dashboard Customer-->
+<div
+  fxLayout="column"
+  fxLayoutGap="2rem"
+  fxLayoutAlign="start stretch"
+  fxLayoutAlign.lt-md="start stretch"
+  class="section-6 bgmutedColor"
+  ngClass.lt-lg=""
+  fxFlexFill
+>
+  <!--Desktop-->
+  <div
+    fxFlex="550px"
+    fxFlex.lt-lg="auto"
+    fxLayout="row"
+    fxLayout.lt-lg="row wrap"
+    fxLayout.lt-md="column"
+    fxLayoutGap.gt-md="1rem"
+    fxLayoutGap.lt-lg="0rem grid"
+    fxLayoutAlign="space-around stretch"
+    fxLayoutAlign.lt-lg="start stretch"
+    class="bg-color-white content"
+  >
+    <div
+      fxFlexOrder.lt-md="1"
+      fxFlex
+      fxLayout="column"
+      fxLayoutAlign="start stretch"
+      fxLayoutGap="0px"
+      class=""
+    >
+      <div fxFlex class="bg-color-white">
+        <div
+          fxFlex
+          fxLayout="row"
+          fxLayoutGap="15px"
+          fxLayoutAlign="space-around stretch"
+          class=""
+        >
+          <div
+            fxFlex
+            fxLayout="column"
+            fxLayoutAlign="start stretch"
+            fxLayoutGap="0px"
+            class=""
+          >
+            <div class="z-1 p-3" fxFlex>
+              <mat-card
+                fxFlex
+                fxLayout="column"
+                fxLayoutAlign="start stretch"
+                appMaterialElevation
+                class="cursor-pointer bg-card-start"
+              >
+                <mat-card-content fxFlex>
+                  <h3 class="mat-headline font-weight-bold">Bienvenido</h3>
+                  <!-- <p>
+                    ¿Buscas recircular? Empieza aquí
+                  </p> -->
+                </mat-card-content>
+                <mat-card-actions align="end">
+                  <!-- <button
+                    mat-fab
+                    aria-label="Single"
+                    class="bg-color-white mat-elevation-z0"
+                  >
+                    <mat-icon color="primary">arrow_forward</mat-icon>
+                  </button> -->
+                </mat-card-actions>
+              </mat-card>
+            </div>
+            <!-- <div class="z-1 p-3" fxFlex>
+              <mat-card
+                fxFlex
+                fxLayout="column"
+                fxLayoutAlign="start stretch"
+                appMaterialElevation
+                [routerLink]="'/request/new'"
+                class="cursor-pointer"
+              >
+                <mat-card-content fxFlex>
+                  <h3 class="mat-headline font-weight-bold">Bienvenido de regreso</h3>
+                  <p>
+                    ¿ Buscas empezar a recircular ? Empieza aquí
+                  </p>
+                </mat-card-content>
+                <mat-card-actions align="end">
+                  <button
+                    mat-fab
+                    aria-label="Single"
+                    class="bg-color-white mat-elevation-z0"
+                  >
+                    <mat-icon color="primary">arrow_forward</mat-icon>
+                  </button>
+                </mat-card-actions>
+              </mat-card>
+            </div> -->
+          </div>
+        </div>
+      </div>
+    </div>
+ 
+    <div
+      fxFlexOrder.lt-md="2"
+      fxFlex
+      fxFlex.md="100%"
+      fxLayout="column"
+      fxLayout.md="row"
+      fxLayoutAlign="start stretch"
+      fxLayoutGap="0px"
+      class=""
+    >
+      <div fxFlex class="bg-color-white">
+        <div
+          fxFlex
+          fxLayout="row"
+          fxLayoutGap="15px"
+          fxLayoutAlign="space-around stretch"
+          class=""
+        >
+          <div
+            fxFlex
+            fxLayout="column"
+            fxLayoutAlign="start stretch"
+            fxLayoutGap="0px"
+            class=""
+          >
+            <div class="z-1 p-3" fxFlex>
+              <mat-card
+                fxFlex
+                fxLayout="column"
+                fxLayoutAlign="start stretch"
+                appMaterialElevation
+                routerLink="./books/list" 
+                class="cursor-pointer bg-card-01">
+                <mat-card-content fxFlex>
+
+                 <h3 class="mat-display-3 font-weight-bold  ">{{numeroBooks}}</h3>
+                  <p class="anuncio">
+                    Libros
+                  </p>
+                </mat-card-content>
+              </mat-card>
+            </div>
+            <div  *ngIf="this.authService.isLibrarian.value" class="z-1 p-3" fxFlex>
+              <mat-card
+                fxFlex
+                fxLayout="column"
+                fxLayoutAlign="start stretch"
+                appMaterialElevation
+                routerLink="./reservations" 
+                class="cursor-pointer bg-card-02"
+           
+              >
+                <mat-card-content fxFlex>
+                  <h3 class="mat-display-3 font-weight-bold">{{numeroReserv}}</h3>
+                  <p class="anuncio">
+                    Reservaciones
+                  </p>
+                </mat-card-content>
+              </mat-card>
+            </div>
+        
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!--End Section: Dashboard Customer-->
+ 
+ 
+ 

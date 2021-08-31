@@ -1,0 +1,127 @@
+#logo{
+    width: 7em;
+    height: 7em;
+  }
+   
+  main {
+    margin-top: 1rem;
+  }
+   
+  a {
+    text-decoration: none;
+    color: white;
+  }
+   
+  .formoverlay {
+    height: auto;
+    margin: auto;
+    width: 25%;
+  }
+   
+  .formoverlay mat-card {
+    padding: 0;
+    border: 1px solid #738a962b;
+  }
+   
+  .formoverlay mat-card-title {
+    padding: 1.4em;
+    margin-bottom: 0px;
+    color: white;
+    background-color: #adcf53;
+    font-size: 1.3rem;
+  }
+   
+  .formoverlay mat-card-content {
+    padding: 1rem;
+  }
+   
+  /********************MEDIA QUERIES***************************/
+   
+  /*********4K UHD DISPLAY*********/
+  @media all and (min-width: 2561px) and (max-width:3840px) {
+  }
+   
+  /*********QHD DISPLAY*********/
+  @media all and (min-width: 1921px) and (max-width:2560px){
+  }
+   
+  /*********FHD DISPLAY*********/
+  @media all and (min-width: 1601px) and (max-width:1920px){
+  }
+   
+  /*********HD+ DISPLAY*********/
+  @media all and (min-width: 1441px) and (max-width: 1600px) {
+    .formoverlay {
+      width: 35%;
+    }
+  }
+   
+  /*********HD DISPLAY*********/
+  @media all and (min-width: 1281px) and (max-width:1440px){
+    .formoverlay {
+      width: 40%;
+    }
+  }
+   
+  /*********DESKTOP SXGA*********/
+  @media all and (min-width: 1025px) and (max-width:1280px){
+    .formoverlay {
+      width: 35%;
+    }
+  }
+   
+  @media all and (max-width:1224px) {
+    .formoverlay {
+      width: 45%;
+      height: auto;
+      margin: auto;
+      padding-top: 3rem;
+    }
+  }
+   
+  @media all and (max-width: 1024px) {
+    .formoverlay {
+      width: 55%;
+      height: auto;
+      margin: auto;
+      padding-top: 1.4rem;
+    }
+  }
+   
+  @media all and (max-width: 980px) {
+    .formoverlay {
+      width: 60%;
+      height: auto;
+      margin: auto;
+      padding-top: 1.4rem;
+    }
+  }
+   
+  @media all and (max-width: 736px) {
+    .formoverlay {
+      width: 80%;
+      height: auto;
+      margin: auto;
+      padding-top: 1.4rem;
+    }
+  }
+   
+  @media all and (max-width: 480px) {
+    .formoverlay {
+      width: 90%;
+      height: auto;
+      margin: auto;
+      padding-top: 1rem;
+    }
+  }
+   
+  .dangerColor {
+    color: crimson;
+  }
+   
+  .textCenter {
+    text-align: center;
+  }
+   
+  
+  

@@ -1,0 +1,95 @@
+<div fxLayout="row" fxLayoutAlign="center center" class="general-container">
+    <div class="row-height" fxLayoutAlign="space-evenly stretch" class="tabsheader">
+
+    </div>
+    <mat-tab-group fxFlex="90%" #tab dynamicHeight [selectedIndex]="selectedIndex">
+        <mat-tab label="User authentication">
+            <div fxLayout="column" fxLayoutGap="0px" fxLayoutAlign="start center" class="bgsoftColor">
+                <div fxFlex fxLayout="column" fxLayoutGap="0px" fxLayoutAlign="center stretch" fxFlexFill
+                    style="padding-top: 5rem; padding-bottom: 5rem;">
+                    <div fxLayout="row" fxLayoutGap="0px" fxLayoutAlign="space-between stretch" class="section-3"
+                        ngClass.lt-lg="content">
+                        <div fxFlexFill class="">
+                            <mat-card class="mat-fixed-card mat-elevation-z3 general-card">
+                                <mat-card-header>
+                                    <div mat-card-avatar>
+                                        <mat-icon aria-hidden="false" aria-label="Done" class="primaryColor">
+                                            login</mat-icon>
+                                    </div>
+                                    <mat-card-title>
+                                        Login
+                                    </mat-card-title>
+                                    <mat-card-subtitle> </mat-card-subtitle>
+                                </mat-card-header>
+                                <mat-card-content>
+                                    <!--              Here will go the table-->
+                                    <form [formGroup]="loginForm" (ngSubmit)="login()" class="example-container" autocomplete="off">
+                                        <div fxLayout="row" fxLayoutGap="1%" fxLayoutAlign="start center">
+                                            <div fxFlex="100%">
+
+                                            </div>
+                                        </div>
+                                        <mat-divider></mat-divider>
+                                        <br />
+
+                                        <div fxLayout="column" fxLayout.lt-sm="column" fxLayoutGap="10px"
+                                            fxLayoutGap.lt-sm="0px" fxLayoutAlign="start center"
+                                            fxLayoutAlign="start stretch">
+                                            <div fxFlex="calc(50% - 10px)" fxFlex.lt-sm="auto">
+                                                <mat-form-field appearance="outline" style="width:
+                        100%">
+                                                    <mat-label>Email</mat-label>
+                                                    <input matInput type="text" name="title" placeholder="email"
+                                                        formControlName="email" required="required" 
+                                                         />
+                                                </mat-form-field>
+                                            </div>
+                                            <div fxFlex="calc(50% - 10px)" fxFlex.lt-sm="auto">
+                                                <mat-form-field appearance="outline" style="width:
+                        100%">
+                                                    <mat-label>Password</mat-label>
+                                                    <input matInput [type]="hide ? 'password' : 'text'" name="title" placeholder="password"
+                                                        formControlName="password" required="required" />
+                                                        <button type="button" mat-icon-button matSuffix (click)="hide = !hide">
+                                                            <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+                                                        </button>
+                                                </mat-form-field>
+                                            </div>
+                                        </div>
+
+
+
+                                        <mat-card-actions >
+                                            <button type="button" (click)="redirec()"  *ngIf="!isLod" mat-raised-button cdkFocusInitial>
+                                                Registrarse
+                                            </button>
+
+                                            
+                                            <div  *ngIf="isLod" fxLayout="row" fxLayout.lt-sm="column" fxLayoutGap="10px"
+                                            fxLayoutGap.lt-sm="0px" fxLayoutAlign="center center"
+                                            fxLayoutAlign="center stretch">
+
+                                            <img  width="50px" height="50px" src="assets/test.svg" alt="">
+                                          
+                                        </div>
+        
+                                            <button  *ngIf="!isLod" type="submit" mat-raised-button color="primary">
+                                                Login
+                                            </button>
+                                        </mat-card-actions>
+
+
+
+                                    </form>
+                                </mat-card-content>
+                              
+                            </mat-card>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </mat-tab>
+
+
+    </mat-tab-group>
+</div>

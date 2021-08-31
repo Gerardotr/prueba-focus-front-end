@@ -1,0 +1,15 @@
+<h1>All books</h1>
+
+<mat-divider></mat-divider>
+
+<br>
+
+<div fxLayout="row wrap" fxLayout.xs="column" fxLayoutAlign="center" fxLayoutGap="20px">
+
+    <div fxFlex="20" fxFlex.lg="15" fxFlex.sm="30" *ngFor="let book of books">
+      <app-book-card [book]="book"></app-book-card>
+    </div>
+
+
+
+</div>

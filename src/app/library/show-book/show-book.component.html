@@ -1,0 +1,48 @@
+<mat-grid-list cols="1" *ngIf="!book; else divBook">
+
+    <mat-grid-tile>
+        <mat-spinner ></mat-spinner>
+    </mat-grid-tile>
+
+</mat-grid-list>
+
+<ng-template #divBook>
+
+    <div fxLayout="row wrap" fxLayout.xs="column" fxLayoutAlign="center " >
+
+      <div fxFlex="50%">
+        <mat-card>
+            <mat-card-header>
+                <mat-card-title>{{book.title}}</mat-card-title>
+                <mat-card-subtitle>{{book.author}}</mat-card-subtitle>
+            </mat-card-header>
+        
+          <img height="100" width="100" src="assets/libro.png" alt="">
+        
+            <mat-card-content>
+                <h3>{{book.published}}</h3>
+                <p>
+                    <strong>Genre</strong>
+                    {{book.genre}}
+                    <br>
+        
+                    <strong>Stock: </strong>
+                    {{book.stock}}
+                </p>
+            </mat-card-content>
+        
+            <mat-card-actions>
+                <button (click)="regresar()" mat-button color="warn">Back</button>
+
+                <button (click)="openDialog()" mat-button color="warn">Reserve</button>
+            
+            </mat-card-actions>
+        </mat-card>
+      </div>
+    </div>
+   
+
+
+
+
+</ng-template>
